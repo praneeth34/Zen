@@ -1,0 +1,7 @@
+Difference between the http requests POST and GET:
+
+The GET and POST are two different types of HTTP requests. GET is used for viewing something, without changing it, while POST is used for changing something. For example, a search page should use GET to get data while a form that changes your password should use POST. Essentially GET is used to retrieve remote data, and POST is used to insert/update remote data.
+
+GET retrieves a representation of the specified resource and include all required data in the URL. You should be able to request the same URL over and over harmlessly. Note that GET should not be used for operations that cause side-effects, such as using it for taking actions in web applications. One reason for this is that GET may be used arbitrarily by robots or crawlers, which should not need to consider the side effects that a request should cause.
+
+POST is for writing data, submits data to be processed (e.g. from an HTML form) to the identified resource. This may result in the creation of a new resource or the updates of existing resources or both. It may have side effects use the same request several times because will likely result in multiple writes. Browsers typically give you warnings about this. POST is not secure, the data is included in the body of the request instead of the URL but it is trivially simple to view/edit.
