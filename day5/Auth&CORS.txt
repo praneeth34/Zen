@@ -1,0 +1,21 @@
+Authentication in Websites:
+Website authentication is the security process that allows users to verify their identities in order to gain access to their personal accounts on a website.
+
+This process occurs behind the scenes any time an individual logs into an online account, including social media profiles, eCommerce sites, rewards programs, online banking accounts, and more.
+
+Website authentication practices often include the creation of an ID and key.
+When a user creates a new account on a website, they create a unique ID and key that will be used in the future to verify their identity and allow them back into the account. That ID and key are then stored in a highly secure web server to compare future credentials against.
+
+The idea is that the user is the only one who has access to their ID and key, thus ensuring they’re the only one able to enter the account.
+
+IDs and keys can come in all shapes and sizes, creating login processes that range from “basically open for an attack” to “entirely safe and secure.”
+
+The most common type of website authentication identification, however, is still that of the traditional username and password as the ID and key.
+
+At the same time, traditional username and password schemes have increasingly become vulnerable to cyber-attacks. The good news is there are more modern alternatives that are more secure and provide a better user experience. Sounds like a win-win, right? More on that to come.
+
+Cross-origin resource sharing (CORS):
+
+Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.
+
+A web page may freely embed cross-origin images, stylesheets, scripts, iframes, and videos. Certain "cross-domain" requests, notably Ajax requests, are forbidden by default by the same-origin security policy. CORS defines a way in which a browser and server can interact to determine whether it is safe to allow the cross-origin request. It allows for more freedom and functionality than purely same-origin requests, but is more secure than simply allowing all cross-origin requests.
