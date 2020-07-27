@@ -2,8 +2,7 @@ var request = new XMLHttpRequest();
 
 request.open(
   "GET",
-  "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=e10baab042375a89a754b694a9ed430a",
-  true
+  "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=fe27a201f5b186275e1516315d735319"
 );
 
 request.onload = function () {
