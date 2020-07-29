@@ -21,18 +21,19 @@ var arr = [
     ["role", "Coder"],
   ],
 ];
+
 function transformEmployeeData(arr) {
   var tranformEmployeeList = [];
   for (let i = 0; i < arr.length; i++) {
     function fromListToObject(a) {
       var object = {};
-      for (var i = 0; i < a.length; ++i) {
-        var newArray = a[i];
+      for (var j = 0; j < a.length; j++) {
+        var newArray = a[j];
         object[newArray[0]] = newArray[1];
       }
       return object;
     }
-    tranformEmployeeList.push(fromListToObject(arr.flat()));
+    tranformEmployeeList.push(fromListToObject(arr[i]));
   }
 
   return tranformEmployeeList;

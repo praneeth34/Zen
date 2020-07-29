@@ -1,1 +1,1 @@
-for (ques of securityQuestions) {
+return object;
