@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body style="background-color: rgb(250, 250, 182);">
+      <center>
+    <h3><div style ="background-color: brown;color: white;">Request For New PAN Card Or/And Changes Or Correction in PAN Data <br> <span>
+        Fields marked with * (asterisk) are mandatory. . To avoid mistake(s),
+        please refer <u style="color: blue;"> guidelines</u> and <u style="color: blue;">instructions</u>.
+    </span></h3>
+    </center>
+    <form autocomplete="off" onsubmit="sendData()">
+        <label for="citizen"><span style="color: red;">*</span> Whether citizen of India </label>
+        <label for="yes" style="margin-left:8em">Yes</label>
+        <input  type="radio" id="yes" value="Yes" name="citizen">
+        <label for="no" >No</label>
+        <input type="radio" id="no" value="No" name="citizen">
+        <hr>
+        <label for="pan"><span style="color: red;">*</span> Permanent Account Number (PAN)</label>
+        <input type="number" id="pan" placeholder="Enter PAN number" required minlength="8" maxlength="19"> 
+        <!--not able to add length constrain-->
+        <hr>
+        <label><span style="color: red;">*</span> Name</label>
+        <hr>
+        <label for="title" >Title</label>
+        <label for="shri/mr" style="margin-left:8em">Shri/Mr</label>
+        <input type="radio" id="shri/mr" value="Shri/Mr" name="title">
+        <label for="Smt/Mrs" style="margin-left:2.5em">Smt./Mrs.</label>
+        <input type="radio" id="Smt/Mrs" value="Smt./Mrs." name="title">
+        <label for="Kumari/Ms" style="margin-left:2.5em">Kumari/Ms</label>
+        <input type="radio" id="Kumari/Ms" value="Kumari/Ms" name="title">
+        <hr>
+        <label for="last-name">Last Name/Surname <input type="text" id="last-name" placeholder="Last name" required></label>
+        <label style="margin-left:8em" for="first-name">First Name <input type="text" id="first-name" placeholder="First name" required></label>
+        <label style="margin-left:8em" for="middle-name">Middle Name <input type="text" id="middle-name" placeholder="Middle name" required></label>
+        <hr>
+        <label for="name"><span style="color: red;">*</span> Name as you would like it printed on the card <span id="cardInfoTxt" style="color:red;">(Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</span></label>
+        <br>
+        <input type="text" id="name" placeholder="Name to be printed" size="60em">
+        <hr>
+        <div>Details of Parents. <span style="color: red;">(Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed.)</span></div>
+        <hr>
+        <label for="mother-pan">Whether mother is single parent and you wish to apply for PAN by furnishing the name of your mother only</label> <br>
+        <label for="yes" style="margin-left:8em">Yes</label>
+        <input  type="radio" id="yes" value="Yes" name="mother-pan">
+        <label for="no">No</label>
+        <input type="radio" id="no" value="No" name="mother-pan">
+        <hr>
+        <label><span style="color: red;">*</span> Father's Name <span style="color: red;">(Mandatory field. Even married women should give father's name only.)</span></label>
+        <hr>
+        <label for="last-name">Last Name/Surname <input type="text" id="last-name" placeholder="Last name" required></label>
+        <label style="margin-left:8em" for="first-name">First Name <input type="text" id="first-name" placeholder="First name" required></label>
+        <label style="margin-left:8em" for="middle-name">Middle Name <input type="text" id="middle-name" placeholder="Middle name" required></label>
+        <hr>
+        <label style="color: red;">Mother's Name(This field is optional.)</label> <br>
+        <label for="last-name">Last Name/Surname <input type="text" id="last-name" placeholder="Last name" required></label>
+        <label style="margin-left:8em" for="first-name">First Name <input type="text" id="first-name" placeholder="First name" required></label>
+        <label style="margin-left:8em" for="middle-name">Middle Name <input type="text" id="middle-name" placeholder="Middle name" required></label>
+        <hr>
+        <table border="">
+            <tr>
+              <th align="left"><label ><span style="color: red;">*</span>  Select Parent name which is to be printed on the card
+                <span style="color: red;">(In case no option is provided then PAN card will be issued with father's name)</span></label></th>
+              <th for="parent-name"><label for="father-name">Father Name </label><input type="radio" id="father-name" value="Father Name" name="parent-name"><label style="margin-left:2.5em" for="mother-name">Mother Name</label><input type="radio" id="mother-name" value="Mother Name" name="parent-name"></th>
+            </tr>
+            <tr>
+              <th align="left"><span style="color: red;">*</span> Date of Birth/Incorporation/Agreement/Partnership
+                or Trust Deed/Formation of Body of Individuals/
+                Association of Persons</th>
+              <th><select name="date" id="date"> 
+                <option value="00">DD</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">rest</option>
+            </select>
+            <select name="month" id="month"> 
+                <option value="00">MM</option>
+                <option value="01">JAN</option>
+                <option value="02">FEB</option>
+                <option value="03">MAR</option>
+                <option value="04">APR</option>
+                <option value="05">MAY</option>
+                <option value="06">JUN</option>
+                <option value="07">JUL</option>
+                <option value="08">JUN</option>
+                <option value="09">SEPT</option>
+                <option value="10">OCT</option>
+                <option value="11">NOV</option>
+                <option value="12">DEC</option>
+            </select>
+            <select name="year" id="year"> 
+                <option value="0000">YYYY</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+            </select></th> 
+            </tr>
+            <tr>
+              <th align="left"><span style="color: red;">*</span> Gender</th>
+              <th for="gender"><label for="male">Male</label><input type="radio" id="male" value="Male" name="gender"><label style="margin-left:2.5em" for="female">Female</label><input type="radio" id="female" value="Female" name="gender"></th>
+            </tr>
+        </table>
+        <hr>
+        <label for="photo-mismatch">Photo Mismatch</label>
+        <input type="checkbox" id="photo-mismatch">
+        <hr>
+        <label for="signature-mismatch">Signature Mismatch</label>
+        <input type="checkbox" id="signature-mismatch">
+        <hr>
+        <table >
+            <tr>
+                <th align="left"><label><span style="color: red;">*</span> Address for Communication</label>
+                </th>
+                <th for="address"><label for="residential">	Residential</label><input type="radio" id="residential value="Residential" name="address"><label  for="office">Office</label><input type="radio" id="office" value="Office" name="address"></th>
+            </tr>
+            <tr>
+                <th align="left">	Office Name (to be filled only in case of office address)</th>
+                <th> <input  type="text" placeholder="Office Name"></th>
+            </tr>
+            <tr>
+                <th align="left">Flat/Door/Block No.</th>
+                <th> <input type="text" placeholder="Flat/Door/Block No."></th>
+            </tr>
+            <tr>
+                <th align="left">	Name of Premises/Building/Village</th>
+                <th> <input  type="text" placeholder="Name of Premises/Building/Village"></th>
+            </tr>
+            <tr>
+                <th align="left">	Road/Street/Lane/Post Office</th>
+                <th> <input type="text" placeholder="Road/Street/Lane/Post Office"></th>
+            </tr>
+            <tr>
+                <th align="left">	Area/Locality/Taluka/Sub-Division</th>
+                <th> <input type="text" placeholder="Area/Locality/Taluka/Sub-Division"></th>
+            </tr>
+            <tr>
+                <th align="left">Town/City/District</th>
+                <th> <input type="text" placeholder="Town/City/District"></th>
+            </tr>
+            <tr>
+                <th align="left">State/Union Territory</th>
+                <th> 
+                    <select name="state" id="state"> 
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="TN">Tamil Nadu</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">PIN (Indicating PIN is mandatory)</th>
+                <th> <input type="number" placeholder="PIN code"></th>
+            </tr>
+            <tr>
+                <th align="left"><span style="color: red;">*</span> Telephone No. <br>(Country code is compulsory)</th>
+                <th> <input type="number" placeholder="Telephone No." required></th>
+            </tr>
+            <tr>
+                <th align="left"><span style="color: red;">*</span> E-mail ID</th>
+                <th> <input type="email" placeholder="E-mail id" required></th>
+            </tr>
+            <tr>
+                <th align="left"><span style="color: red;">*</span> AADHAAR number :</th>
+                <th > <input type="number" placeholder="AADHAAR number" required></th>
+            </tr>
+            <tr>
+                <th align="left"><span style="color: red;">*</span> Name as per AADHAAR letter
+                    or
+                    as per the enrollment ID of Aadhaar application form</th>
+                <th> <input type="text" placeholder="AADHAAR name" required></th>
+            </tr>
+        </table>
+        <hr>
+        <label for="verification">Verification</label><br>
+        <label>	I/We <input type="text" id="name" placeholder="Your Name"> ,the applicant,in the capacity of <select name="auth" id="auth"> <option value="self">Himself/Herself</option> <option value="refre">reference</option></select> do hereby declare that what is stated above is true to the best of my information and belief. </label> <br>
+        <label> I have enclosed <input type="number" placeholder="2"> (number of documents) in support of proposed changes/corrections.</label>
+        <hr>
+        <label for="place">Place  <input type="text" placeholder="Place of Verification"></label>
+        <hr>
+        <label for="date">Verified today, the  <input type="date" value="2020-08-04"> </label>
+        <hr>
+        <label for="enclosed">I/We have enclosed <select name="doc1" id="doc1"> <option value="00">--Please Select--</option> <option value="01">Copy of Passport</option><option value="02">Copy of Driving License</option><option value="03">Copy of Aadhaar</option><option value="04">Copy of PAN Card</option></select> as proof of identity, 
+            <select name="doc2" id="doc2"> <option value="00">--Please Select--</option> <option value="01">Copy of Passport</option><option value="02">Copy of Driving License</option><option value="03">Copy of Aadhaar</option><option value="04">Copy of PAN Card</option></select>  as proof of address, 
+            <select name="doc3" id="doc3"> <option value="00">--Please Select--</option> <option value="01">Copy of Passport</option><option value="02">Copy of Driving License</option><option value="03">Copy of Aadhaar</option><option value="04">Copy of PAN Card</option></select>  as proof of date of birth and  
+            <select name="doc4" id="doc4"> <option value="00">--Please Select--</option> <option value="01">Copy of Passport</option><option value="02">Copy of Driving License</option><option value="03">Copy of Aadhaar</option><option value="04">Copy of PAN Card</option></select>  as proof of PAN allotted.</label>
+        <hr>
+        <label for="option-pan">Whether you wish to have?       <input type="radio" id="both" name="option-pan" value=" Physical PAN Card & e-PAN Card"><label for="both"> Physical PAN Card & e-PAN Card</label>       <input type="radio" id="only" name="option-pan" value="Only e-PAN Card"><label for="only">Only e-PAN Card </label></label>
+        <hr>
+        <table>
+            <tr>
+                <th>
+                    <label for="photo">Upload Photo: </label>
+                </th>
+                <th>
+                    <input type="file">
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="photo">Upload Signature: </label>
+                </th>
+                <th>
+                    <input type="file">
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="photo">Upload Documents: </label>
+                </th>
+                <th>
+                    <input type="file" multiple>
+                </th>
+            </tr>
+        </table>
+        
+        <hr>
+        <center>
+            <input type="submit">
+        </center>
+    </form>
+    
+    <script>
+        function sendData(){
+            alert('Request Submitted');
+        }
+    </script>
+  </body>
+  
+</html>
