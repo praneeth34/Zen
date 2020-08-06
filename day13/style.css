@@ -3,7 +3,15 @@ body {
   padding: 0;
   color: #e9dfd6;
 }
-
+/*
+.wrapper {
+  margin: 20px;
+  border: 2px dotted cyan;
+  outline-style: dotted;
+  outline-offset: -20px;
+  border-radius: 50px;
+  height: 150vh;
+}*/
 .cus-div {
   width: 100%;
   position: relative;
