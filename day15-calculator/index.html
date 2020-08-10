@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Calculator</title>
+
+    <style>
+      body {
+        background: #303030;
+      }
+      .calcy {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        width: 400px;
+        height: 520px;
+        box-shadow: 0 0 50px 5px grey;
+      }
+      #cal_app {
+        width: inherit;
+        height: 30px;
+        font-size: 0.8rem;
+        background-color: #303030;
+        color: white;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-family: monospace;
+        padding: 2px 0 2px 0;
+      }
+      #output {
+        width: inherit;
+        height: 100px;
+        font-size: 2rem;
+        background-color: #303030;
+        color: white;
+        text-align: right;
+        border: none;
+        outline: none;
+      }
+      .layer1 {
+        width: inherit;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+      }
+      .layer2 {
+        width: inherit;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      input {
+        flex: 1;
+        font-size: 1.4rem;
+        border: 1px solid #acacac;
+        color: white;
+        outline: none;
+      }
+      .main_num {
+        background-color: #303030;
+        color: white;
+        border: 1px solid blue;
+      }
+      .oper {
+        background-color: #303030;
+      }
+      #clearButton {
+        font-size: 1rem;
+      }
+      input:hover {
+        background-color: #101011;
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calcy">
+        <form name="calc">
+          <input type="text" name="" value="Simple Calculator" id="cal_app" />
+          <input type="text" name="answer" id="output" />
+          <div class="row">
+            <div class="col">
+              <div class="layer2">
+                <input
+                  type="button"
+                  class="oper"
+                  value="Clear"
+                  onclick="calc.answer.value = '' "
+                  id="clearButton"
+                />
+              </div>
+              <div class="layer1">
+                <input
+                  type="button"
+                  class="main_num"
+                  value="7"
+                  onclick="calc.answer.value += '7' "
+                />
+                <input
+                  type="button"
+                  class="main_num"
+                  value="8"
+                  onclick="calc.answer.value += '8' "
+                />
+                <input
+                  type="button"
+                  class="main_num"
+                  value="9"
+                  onclick="calc.answer.value += '9' "
+                />
+              </div>
+              <div class="layer1">
+                <input
+                  type="button"
+                  class="main_num"
+                  value="4"
+                  onclick="calc.answer.value += '4' "
+                />
+                <input
+                  type="button"
+                  class="main_num"
+                  value="5"
+                  onclick="calc.answer.value += '5' "
+                />
+                <input
+                  type="button"
+                  class="main_num"
+                  value="6"
+                  onclick="calc.answer.value += '6' "
+                />
+              </div>
+              <div class="layer1">
+                <input
+                  type="button"
+                  class="main_num"
+                  value="1"
+                  onclick="calc.answer.value += '1' "
+                />
+                <input
+                  type="button"
+                  class="main_num"
+                  value="2"
+                  onclick="calc.answer.value += '2' "
+                />
+                <input
+                  type="button"
+                  class="main_num"
+                  value="3"
+                  onclick="calc.answer.value += '3' "
+                />
+              </div>
+              <div class="layer1">
+                <input
+                  type="button"
+                  class="main_num"
+                  value="0"
+                  onclick="calc.answer.value += '0' "
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="layer2">
+                <input
+                  type="button"
+                  value="="
+                  class="oper"
+                  onclick="calc.answer.value = eval(calc.answer.value)"
+                />
+              </div>
+              <div class="layer1">
+                <input
+                  type="button"
+                  value="+"
+                  class="oper"
+                  onclick="calc.answer.value += '+' "
+                />
+                <input
+                  type="button"
+                  value="-"
+                  class="oper"
+                  onclick="calc.answer.value += '-' "
+                />
+              </div>
+              <div class="layer1">
+                <input
+                  type="button"
+                  value="*"
+                  class="oper"
+                  onclick="calc.answer.value += '*' "
+                />
+                <input
+                  type="button"
+                  value="/"
+                  class="oper"
+                  onclick="calc.answer.value += '/' "
+                />
+              </div>
+              <div class="layer1">
+                <input
+                  type="button"
+                  value="%"
+                  class="oper"
+                  onclick="calc.answer.value += '%' "
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
