@@ -32,7 +32,7 @@ function createArr(start, end) {
   }
   return myArr;
 }
-
+//input range
 let numberArr = createArr(10000000, 99999999);
 
 btn.addEventListener("click", () => {
