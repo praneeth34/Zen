@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(https://images.pexels.com/photos/3358507/pexels-photo-3358507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+}
+#orange {
+  color: orange;
+}
+#white {
+  color: white;
+}
+#green {
+  color: green;
+}
