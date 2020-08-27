@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="shortcut icon" href="#" />
+    <style>
+      area {
+        cursor: pointer;
+      }
+      .tv {
+        position: absolute;
+        top: 10px;
+        right: 35%;
+      }
+      video {
+        position: absolute;
+        top: 50px;
+        right: 36.75%;
+        border-radius: 5px;
+      }
+      .remote {
+        position: absolute;
+        top: 20px;
+        right: 10%;
+      }
+      #show {
+        position: absolute;
+        top: 70px;
+        right: 39%;
+        color: royalblue;
+        text-align: center;
+        font-size: xx-large;
+        font-weight: 600;
+      }
+      #status {
+        position: absolute;
+        bottom: 80px;
+        right: 20%;
+        font-size: 25px;
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(240, 238, 238);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <img src="remote.png" usemap="#image-map" class="remote" />
+
+      <map name="image-map">
+        <area
+          target=""
+          alt="power"
+          title="power"
+          id="power"
+          href="#"
+          coords="193,65,11"
+          shape="circle"
+        />
+        <area
+          target=""
+          alt="next"
+          title="next"
+          id="next"
+          href="#"
+          coords="193,289,12"
+          shape="circle"
+        />
+        <area
+          target=""
+          alt="prev"
+          title="prev"
+          id="prev"
+          href="#"
+          coords="195,320,12"
+          shape="circle"
+        />
+        <area
+          target=""
+          alt="+"
+          title="+"
+          id="+"
+          href="#"
+          coords="130,288,12"
+          shape="circle"
+        />
+        <area
+          target=""
+          alt="-"
+          title="-"
+          id="-"
+          href="#"
+          coords="133,321,11"
+          shape="circle"
+        />
+        <area
+          target=""
+          alt="mute"
+          title="mute"
+          id="mute"
+          href="#"
+          coords="162,306,14"
+          shape="circle"
+        />
+      </map>
+
+      <img
+        src="https://zen-daily-tasks-yeshwanth.netlify.app/week-6/day-3/TV-1.png"
+        usemap="#image-map"
+        class="tv"
+      />
+      <video
+        width="710px"
+        height="390px"
+        id="video_player"
+        autoplay=""
+        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+      ></video>
+      <div id="show"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
