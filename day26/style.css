@@ -1,0 +1,30 @@
+#continue-row {
+  display: grid;
+}
+
+#btnScrollToTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(240, 123, 69);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#btnScrollToTop:active {
+  background: green;
+}
+
+button:hover {
+  border: 1px solid black;
+}
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
