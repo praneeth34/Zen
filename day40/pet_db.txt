@@ -1,0 +1,137 @@
+> use petstore
+switched to db petstore
+> db.createCollection('dogs')
+{ "ok" : 1 }
+> db.dogs.insertMany([
+... {
+...   breed: 'Labrador',
+...   name: 'Chocolate',
+...   age: '5 months',
+...   parents: 'champions'
+... },
+... {
+...   breed: 'st. banred',
+...   name: 'Bruno',
+...   age: '1 year',
+...   parents: 'champions'
+... },
+... {
+...   breed: 'pug',
+...   name: 'hickup',
+...   age: '6 months',
+...   parents: 'champions'
+... },
+... {
+...   breed: 'Labrador',
+...   name: 'dexter',
+...   age: '9 months',
+...   parents: 'champions'
+... }
+... ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5f5ec5e04be4784b9ddd21a8"),
+                ObjectId("5f5ec5e04be4784b9ddd21a9"),
+                ObjectId("5f5ec5e04be4784b9ddd21aa"),
+                ObjectId("5f5ec5e04be4784b9ddd21ab")
+        ]
+}
+> db.createCollection('cats')
+{ "ok" : 1 }
+> db.cats.insertMany([
+... {
+...   breed: 'persian',
+...   name: 'lazy',
+...   age: '10 months',
+...   origin: 'Persia'
+... },
+... {
+...   breed: 'british shorthair',
+...   name: 'snowy',
+...   age: '1 year',
+...   origin: 'london'
+... },
+... {
+...   breed: 'Maine Coon',
+...   name: 'butterscotch',
+...   age: '6 months',
+...   origin: 'india'
+... },
+... {
+...   breed: 'sphynx cat',
+...   name: 'queen',
+...   age: '9 months',
+...   origin: 'egypt'
+... }
+... ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5f5ec7054be4784b9ddd21ac"),
+                ObjectId("5f5ec7054be4784b9ddd21ad"),
+                ObjectId("5f5ec7054be4784b9ddd21ae"),
+                ObjectId("5f5ec7054be4784b9ddd21af")
+        ]
+}
+> db.find().pretty()
+uncaught exception: TypeError: db.find is not a function :
+@(shell):1:1
+> db.dogs.find().pretty()
+{
+        "_id" : ObjectId("5f5ec5e04be4784b9ddd21a8"),
+        "breed" : "Labrador",
+        "name" : "Chocolate",
+        "age" : "5 months",
+        "parents" : "champions"
+}
+{
+        "_id" : ObjectId("5f5ec5e04be4784b9ddd21a9"),
+        "breed" : "st. banred",
+        "name" : "Bruno",
+        "age" : "1 year",
+        "parents" : "champions"
+}
+{
+        "_id" : ObjectId("5f5ec5e04be4784b9ddd21aa"),
+        "breed" : "pug",
+        "name" : "hickup",
+        "age" : "6 months",
+        "parents" : "champions"
+}
+{
+        "_id" : ObjectId("5f5ec5e04be4784b9ddd21ab"),
+        "breed" : "Labrador",
+        "name" : "dexter",
+        "age" : "9 months",
+        "parents" : "champions"
+}
+> db.cats.find().pretty()
+{
+        "_id" : ObjectId("5f5ec7054be4784b9ddd21ac"),
+        "breed" : "persian",
+        "name" : "lazy",
+        "age" : "10 months",
+        "origin" : "Persia"
+}
+{
+        "_id" : ObjectId("5f5ec7054be4784b9ddd21ad"),
+        "breed" : "british shorthair",
+        "name" : "snowy",
+        "age" : "1 year",
+        "origin" : "london"
+}
+{
+        "_id" : ObjectId("5f5ec7054be4784b9ddd21ae"),
+        "breed" : "Maine Coon",
+        "name" : "butterscotch",
+        "age" : "6 months",
+        "origin" : "india"
+}
+{
+        "_id" : ObjectId("5f5ec7054be4784b9ddd21af"),
+        "breed" : "sphynx cat",
+        "name" : "queen",
+        "age" : "9 months",
+        "origin" : "egypt"
+}
